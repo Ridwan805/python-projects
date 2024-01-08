@@ -17,10 +17,11 @@ def next_turn(row, column):
             
             elif check_winner() is True:
                 headline.config(text = (symbols[0]+" Wins"))
+                restrat.config(bg = "grey")
             
             elif check_winner == "Tie":
                 headline.config(text = ("Tie"))
-        
+                
         else:
             game_board[row][column]['text'] = which
 
@@ -30,18 +31,20 @@ def next_turn(row, column):
             
             elif check_winner() is True:
                 headline.config(text = (symbols[1] + " Wins"))
+                restrat.config(bg = "grey")
             
             elif check_winner() == "Tie":
                 headline.config(text = ("Tie"))
+                
         
 
 
 def check_winner():
     for i in range(3):
         if game_board[i][0]['text'] == game_board[i][1]['text'] == game_board[i][2]['text'] != "":
-            game_board[i][0].config(bg = "#013220")
-            game_board[i][1].config(bg = "#013220")
-            game_board[i][2].config(bg = "#013220")
+            game_board[i][0].config(bg = "green")
+            game_board[i][1].config(bg = "green")
+            game_board[i][2].config(bg = "green")
 
             if i == 0:
                 game_board[1][2].config(bg = "black")
@@ -71,9 +74,9 @@ def check_winner():
         
     for j in range(3):
         if game_board[0][j]['text'] == game_board[1][j]['text'] == game_board[2][j]['text'] != "":
-            game_board[0][j].config(bg = "#013220")
-            game_board[1][j].config(bg = "#013220")
-            game_board[2][j].config(bg = "#013220")
+            game_board[0][j].config(bg = "green")
+            game_board[1][j].config(bg = "green")
+            game_board[2][j].config(bg = "green")
 
             if j == 0:
                 game_board[0][1].config(bg = "black")
@@ -101,9 +104,9 @@ def check_winner():
             return True
                 
     if game_board[0][0]['text'] == game_board[1][1]['text'] == game_board[2][2]['text'] != "":
-            game_board[0][0].config(bg = "#013220")
-            game_board[1][1].config(bg = "#013220")
-            game_board[2][2].config(bg = "#013220")
+            game_board[0][0].config(bg = "green")
+            game_board[1][1].config(bg = "green")
+            game_board[2][2].config(bg = "green")
 
             game_board[0][2].config(bg = "black")
             game_board[0][1].config(bg = "black")
@@ -116,9 +119,9 @@ def check_winner():
             return True
         
     elif game_board[0][2]['text'] == game_board[1][1]['text'] == game_board[2][0]['text']  != "":
-            game_board[0][2].config(bg = "#013220")
-            game_board[1][1].config(bg = "#013220")
-            game_board[2][0].config(bg = "#013220")
+            game_board[0][2].config(bg = "green")
+            game_board[1][1].config(bg = "green")
+            game_board[2][0].config(bg = "green")
 
             game_board[0][0].config(bg = "black")
             game_board[0][1].config(bg = "black")
@@ -131,7 +134,9 @@ def check_winner():
     elif empty_spaces() is False:
             for row in range(3):
                for column in range(3):
-                   game_board[row][column].config(bg="yellow")
+                   game_board[row][column].config(bg="red")
+            restrat.config(bg = "yellow")
+        
             return "Tie"
         
     else:
@@ -161,6 +166,7 @@ def new_game():
     for i in range(3):
         for j in range(3):
             game_board[i][j].config(text='', bg ="#F0F0F0")
+            restrat.config(bg = "#F0F0F0")
 
 
 window = Tk()
