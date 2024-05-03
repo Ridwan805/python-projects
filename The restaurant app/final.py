@@ -42,7 +42,7 @@ def welcome():
 
     first_button.destroy()
 
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
 
     burgers = Button(f,text="Burgers",pady=40,padx=60,command=lambda:menu("Burgers"),width=20,height=2)
@@ -85,7 +85,7 @@ def menu(food):
     global back
     
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
 
     
@@ -376,7 +376,7 @@ def extras(name_of_dish,amount = 0):
     global total_cost
 
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
 
     var1 = IntVar()
@@ -427,7 +427,7 @@ def largesmall(type,price):
     global total_cost
 
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
 
     total_cost += price
@@ -505,7 +505,7 @@ def getting_size(some):
     global further
 
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
     if some == 0:
         total_cost += 0
@@ -546,7 +546,7 @@ def size_of_pizza(cost,name):
     global total_cost
 
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
      
     size=["Small","Medium", "Large","Family Size"]
@@ -596,7 +596,7 @@ def welcome2():
     first_button.destroy()
     
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
 
     burgers = Button(f,text="Burgers",pady=40,padx=60,command=lambda:menu("Burgers"),width=20,height=2)
@@ -628,7 +628,7 @@ def orderitornot(name_of_dish, amount = 0):
     
     
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
 
     if name_of_dish== "Pizza":
@@ -675,7 +675,7 @@ def confirmornot():
     
     x = 1
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
     
     show0 = Label(f,text="You Ordered:",font=("brownies",25))
@@ -704,7 +704,7 @@ def orderaginorquit():
     global tup
 
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
     tup = []
     total_cost = 0
@@ -730,7 +730,7 @@ def confirmnow():
     global total_cost
 
     f.destroy()
-    f = LabelFrame(window,padx=20,pady=20)
+    f = LabelFrame(window,padx=20,pady=20,borderwidth=0)
     f.pack(padx=15,pady=15)
     tup = []
     total_cost = 0
