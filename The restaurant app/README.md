@@ -31,12 +31,12 @@ pip3 install PILLOW
        Types of messagebox
       <br><br>
        <ul>
-         <li>showinfo</li>
-         <li>showwarning</li>
-         <li>showerror</li>
-         <li>askquestion</li>
-         <li>askokcancel</li>
-         <li>askyesorno</li>
+         <li><code>showinfo</code></li>
+         <li><code>showwarning</code></li>
+         <li><code>showerror</code></li>
+         <li><code>askquestion</code></li>
+         <li><code>askokcancel</code></li>
+         <li><code>askyesorno</code></li>
        </ul>
     </li>
     <li>Frame <code>LableFrame</code></li>
